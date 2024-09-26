@@ -1,0 +1,277 @@
+.reg-container{
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 30px 0px #FFFFFF40;
+    border-radius: 20px;
+    height: 60vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    z-index: 1000;
+    position: fixed;
+    top: 20vh;
+    left: 25vw;
+}
+.reg-container-cross{
+    width: 40vw;
+    height: 5vh;
+    display: flex;
+    justify-content: right;
+}
+.reg-img-cross{
+    cursor: pointer;
+    width: 2.5vw;
+    height: 5vh;
+}
+.reg-container-head{
+    font-family: DM Sans;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+}
+.name-div-reg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+.name-para-reg{
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+}
+.name-input-reg{
+    width: 25vw;
+    height: 4vh;
+    border: 1px solid #000000;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: left;
+    color: #8E8E8E;
+    padding-left: 1vw;
+}
+.name-err-reg{
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pass-div-reg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.pass-para-reg{
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+}
+.pass-input-reg{
+    width: 25vw;
+    height: 4vh;
+    border: 1px solid #000000;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: left;
+    color: #8E8E8E;
+    padding-left: 1vw;
+    position: relative;
+    left: 2vw;
+}
+.eye-img-reg{
+    z-index: 1;
+    cursor: pointer;
+}
+.pass-err-reg{
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.err-reg{
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-btn-reg{
+    background-color: #73ABFF;
+    width: 8.5vw;
+    height: 5vh;
+    border: none;
+    border-radius: 20px;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    cursor: pointer;
+    position: relative;
+    top: 2vh;
+}
+@media (max-width: 500px){
+    .reg-container{
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 30px 0px #FFFFFF40;
+        border-radius: 20px;
+        height: 60vh;
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1vh;
+        z-index: 1000;
+        padding-top: 5vh;
+        position: fixed;
+        top: 15vh;
+        left: 15vw;
+    }
+    .reg-container-cross{
+        width: 60vw;
+        height: 5vh;
+        display: flex;
+        justify-content: right;
+    }
+    .reg-img-cross{
+        cursor: pointer;
+        width: 8vw;
+        height: 4vh;
+    }
+    .reg-container-head{
+        font-family: DM Sans;
+        font-size: 1.2em;
+        font-weight: 700;
+        text-align: center;
+        color: #000000;
+    }
+    .name-div-reg{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 0vw;
+        gap: -10vh;
+    }
+    .name-para-reg{
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: center;
+        color: #000000;
+    }
+    .name-input-reg{
+        width: 90%;
+        height: 4vh;
+        border: 1px solid #000000;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: left;
+        color: #8E8E8E;
+        padding-left: 1vw;
+    }
+    .name-err-reg{
+        width: 85%;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        display: flex;
+        justify-content: unset;
+        align-items: normal;
+        text-align: left;
+    }
+    .pass-div-reg{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: -10vh;
+    }
+    .pass-para-reg{
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: center;
+        color: #000000;
+    }
+    .pass-input-reg{
+        width: 90%;
+        height: 4vh;
+        border: 1px solid #000000;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: left;
+        color: #8E8E8E;
+        padding-left: 1vw;
+        position: relative;
+        left: 0vw;
+    }
+    .eye-img-reg{
+        z-index: 1;
+        cursor: pointer;
+        position: relative;
+        bottom: 3.5vh;
+        left: 48vw;
+    }
+    .pass-err-reg{
+        width: 85%;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        display: flex;
+        justify-content: unset;
+        align-items: normal;
+        text-align: left;
+    }
+    .err-reg{
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .signup-btn-reg{
+        background-color: #73ABFF;
+        width: 40%;
+        height: 5vh;
+        border: none;
+        border-radius: 20px;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        cursor: pointer;
+        position: relative;
+        top: 0vh;
+    }
+}

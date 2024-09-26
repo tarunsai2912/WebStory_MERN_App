@@ -1,0 +1,28 @@
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background: #FFFFFF;
+    overflow-x: hidden;
+    position: relative;
+    right: 0.5vw;
+    bottom: 1.1vh;
+}
+@media (max-width: 500px){
+    :root{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+        background: #000000E5;
+        overflow-x: hidden;
+        position: relative;
+        right: 2vw;
+        bottom: 1.1vh;
+    }
+}

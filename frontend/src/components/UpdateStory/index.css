@@ -1,0 +1,479 @@
+.update-container{
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 30px 0px #FFFFFF40;
+    border-radius: 20px;
+    height: 69vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    padding-top: 0.5vh;
+    position: fixed;
+    top: 20vh;
+    left: 20vw;
+}
+.cross-div-update{
+    width: 98%;
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+}
+.cross-para-update{
+    width: 93%;
+    display: flex;
+    justify-content: right;
+    font-family: DM Sans;
+    font-size: 0.6em;
+    font-weight: 700;
+    color: #474141;
+    position: relative;
+    bottom: 2vh;
+}
+.slide-div1-update{
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+    position: relative;
+    bottom: 2vh;
+    left: 3vw;
+}
+.slide-no-div-update{
+    height: 100%;
+    width: 6vw;
+    border-radius: 10px;
+}
+.slide-no-update{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 15px 0px #0000001A;
+    font-family: DM Sans;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2vw;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-align: center;
+}
+.slide-del-update{
+    width: 1vw;
+    height: 2vh;
+    cursor: pointer;
+}
+.slide-add-update{
+    height: 100%;
+    width: 6vw;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 15px 0px #0000001A;
+    font-family: DM Sans;
+    gap: 0.2vw;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+.slide-div2-update{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    position: relative;
+    left: 3vw;
+    bottom: 1vh;
+}
+.head-div-update{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+}
+.head-para-update{
+    font-family: DM Sans;
+    font-size: 1.2em;
+    width: 10vw;
+    font-weight: 700;
+    color: #000000;
+}
+.head-inp-update{
+    width: 25vw;
+    height: 5vh;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    color: #474141;
+    padding-left: 1vw;
+}
+.descr-div-update{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+.descr-para-update{
+    font-family: DM Sans;
+    width: 10vw;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #000000;
+}
+.descr-inp-update{
+    width: 25vw;
+    height: 11vh;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    font-family: DM Sans;
+    font-size: 1em;
+    resize: none;
+    font-weight: 700;
+    color: #474141;
+    padding-left: 1vw;
+}
+.url-div-update{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+}
+.url-para-update{
+    font-family: DM Sans;
+    width: 10vw;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #000000;
+}
+.url-inp-update{
+    width: 25vw;
+    height: 5vh;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    color: #474141;
+    padding-left: 1vw;
+}
+.cat-div-update{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+}
+.cat-para-update{
+    font-family: DM Sans;
+    width: 10vw;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #000000;
+}
+.cat-inp-update{
+    width: 26.3vw;
+    height: 5vh;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    color: #474141;
+    padding-left: 1vw;
+    cursor: pointer;
+}
+.slide-div3-update{
+    width: 85%;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+    position: relative;
+    left: 3vw;
+    top: 1vh;
+}
+.prev-btn-update{
+    width: 8vw;
+    height: 100%;
+    border: none;
+    background-color: #7EFF73;
+    border-radius: 20px;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    cursor: pointer;
+}
+.next-btn-update{
+    width: 8vw;
+    height: 100%;
+    border: none;
+    background-color: #73ABFF;
+    border-radius: 20px;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    cursor: pointer;
+}
+.post-btn-update{
+    width: 8vw;
+    height: 100%;
+    border: none;
+    background-color: #FF7373;
+    border-radius: 20px;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    cursor: pointer;
+    position: relative;
+    left: 26vw;
+}
+@media (max-width: 500px){
+    .update-container{
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 30px 0px #FFFFFF40;
+        border-radius: 20px;
+        height: 69vh;
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding-top: 0.5vh;
+        position: fixed;
+        top: 15vh;
+        left: 12vw;
+    }
+    .cross-div-update{
+        width: 98%;
+        display: flex;
+        justify-content: right;
+        cursor: pointer;
+    }
+    .cross-para1-update{
+        width: 93%;
+        display: flex;
+        justify-content: center;
+        font-family: DM Sans;
+        font-size: 1.2em;
+        font-weight: 700;
+        color: #000000;
+        position: relative;
+        bottom: 3vh;
+    }
+    .grid-div-update{
+        width: 95%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+        position: relative;
+        bottom: 5vh;
+    }
+    .slide-div1-update{
+        width: 20%;
+        height: 98%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+        position: relative;
+        top: 1vh;
+    }
+    .slide-no-div-update{
+        height: 7.5vh;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .slide-no-update{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 15px 0px #0000001A;
+        font-family: DM Sans;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8em;
+        font-weight: 700;
+        text-align: center;
+    }
+    .slide-del-update{
+        width: 4vw;
+        height: 2vh;
+        cursor: pointer;
+        position: relative;
+        top: 1vh;
+        left: 3vw;
+    }
+    .slide-add-update{
+        height: 7.5vh;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 15px 0px #0000001A;
+        font-family: DM Sans;
+        gap: 0.2vw;
+        font-size: 0.8em;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+    }
+    .slide-div2-update{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        position: relative;
+        left: 3vw;
+        bottom: 1vh;
+    }
+    .head-div-update{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 0vw;
+    }
+    .head-para-update{
+        font-family: DM Sans;
+        font-size: 1.2em;
+        width: 90%;
+        font-weight: 700;
+        color: #000000;
+    }
+    .head-inp-update{
+        width: 85%;
+        height: 3vh;
+        border: 1px solid #000000;
+        background-color: #FFFFFF;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        color: #474141;
+        padding-left: 1vw;
+        position: relative;
+        bottom: 1vh;
+    }
+    .descr-div-update{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 0vw;
+    }
+    .descr-para-update{
+        font-family: DM Sans;
+        font-size: 1.2em;
+        width: 90%;
+        font-weight: 700;
+        color: #000000;
+    }
+    .descr-inp-update{
+        width: 85%;
+        height: 8vh;
+        border: 1px solid #000000;
+        background-color: #FFFFFF;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        color: #474141;
+        padding-left: 1vw;
+        position: relative;
+        bottom: 1vh;
+    }
+    .url-div-update{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 0vw;
+    }
+    .url-para-update{
+        font-family: DM Sans;
+        font-size: 1.2em;
+        width: 90%;
+        font-weight: 700;
+        color: #000000;
+    }
+    .url-inp-update{
+        width: 85%;
+        height: 3vh;
+        border: 1px solid #000000;
+        background-color: #FFFFFF;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        color: #474141;
+        padding-left: 1vw;
+        position: relative;
+        bottom: 1vh;
+    }
+    .cat-div-update{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 0vw;
+    }
+    .cat-para-update{
+        font-family: DM Sans;
+        font-size: 1.2em;
+        width: 90%;
+        font-weight: 700;
+        color: #000000;
+    }
+    .cat-inp-update{
+        width: 85%;
+        height: 3vh;
+        border: 1px solid #000000;
+        background-color: #FFFFFF;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        color: #474141;
+        padding-left: 1vw;
+        position: relative;
+        bottom: 1vh;
+    }
+    .post1-div-update{
+        width: 100%;
+        height: 5vh;
+        position: relative;
+        bottom: 4vh;
+    }
+    .post1-btn-update{
+        width: 22vw;
+        height: 5vh;
+        border: none;
+        background-color: #FF7373;
+        border-radius: 20px;
+        font-family: DM Sans;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: center;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        cursor: pointer;
+        position: relative;
+        left: 26vw;
+    }
+}
