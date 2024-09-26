@@ -146,8 +146,7 @@ function StoryPage({setLoginOpen, width}) {
           fontSize: '1.2em',
           fontWeight: '700',
           textAlign: 'center',
-          bottom: '35vh',
-          left: '1.5vw'
+          bottom: '35vh'
         },
         autoClose: 2000
       })
@@ -162,8 +161,7 @@ function StoryPage({setLoginOpen, width}) {
           fontSize: '1em',
           fontWeight: '700',
           textAlign: 'center',
-          bottom: '35vh',
-          left: '1.5vw'
+          bottom: '35vh'
         },
         autoClose: 2000
       });
@@ -172,8 +170,8 @@ function StoryPage({setLoginOpen, width}) {
   };
 
   const handleShare = (id, num) => {
-    const link = `https://web-story-mern-frontend.vercel.app/story/${id}/${num}`
-    copyToClipboard(link)
+    const link1 = `https://web-story-mern-frontend.vercel.app/story/${id}/${num}`
+    copyToClipboard(link1)
   }
 
   const handleDownload = () => {
