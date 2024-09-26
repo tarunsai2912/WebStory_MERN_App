@@ -1,8 +1,6 @@
 import axios from 'axios'
-const url = 'http://localhost:3003/api'
+const url = 'https://web-story-mern-backend.vercel.app/api'
 const authToken = sessionStorage.getItem('token')
-const userId = sessionStorage.getItem('userId')
-const username = sessionStorage.getItem('name')
 
 export const getBookmarks = async () => {
     try{

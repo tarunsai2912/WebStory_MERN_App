@@ -1,5 +1,5 @@
 import axios from 'axios'
-const url = 'http://localhost:3003/api'
+const url = 'https://web-story-mern-backend.vercel.app/api'
 
 export const UserLogin = async ({name, password}) => {
     try{

@@ -8,7 +8,7 @@ import './index.css'
 
 function CreateStory({setCreate, width}) {
 
-  const url = 'http://localhost:3003/api'
+  const url = 'https://web-story-mern-backend.vercel.app/api'
   const authToken = sessionStorage.getItem('token')
   const [slides, setSlides] = useState([
       { heading: '', description: '', url: '', urlType: '' },

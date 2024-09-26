@@ -8,7 +8,7 @@ import axios from 'axios'
 
 function UpdateStory({setUpdate, width}) {
 
-  const url = 'http://localhost:3003/api'
+  const url = 'https://web-story-mern-backend.vercel.app/api'
   const authToken = sessionStorage.getItem('token')
   const storyId = sessionStorage.getItem('storyId')
   const [story, setStory] = useState({})

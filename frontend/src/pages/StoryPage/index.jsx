@@ -22,7 +22,7 @@ function StoryPage({setLoginOpen, width}) {
 
   const navigate = useNavigate()
   const {storyId, num} = useParams()
-  const url = 'http://localhost:3003/api'
+  const url = 'https://web-story-mern-backend.vercel.app/api'
   const authToken = sessionStorage.getItem('token')
   const userId = sessionStorage.getItem('userId')
   const [currentSlide, setCurrentSlide] = useState(parseInt(num));
