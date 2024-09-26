@@ -181,7 +181,7 @@ function StoryPage({setLoginOpen, width}) {
     const slide = story.slides[currentSlide];
     const link = document.createElement('a');
     link.href = slide.url;
-    link.download = slide.url.split('/').pop();
+    link.download = slide.url.split('/').pop()
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
