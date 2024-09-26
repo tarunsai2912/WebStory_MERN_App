@@ -172,7 +172,7 @@ function StoryPage({setLoginOpen, width}) {
   };
 
   const handleShare = (id, num) => {
-    const link = `http://localhost:5173/story/${id}/${num}`
+    const link = `https://web-story-mern-frontend.vercel.app/story/${id}/${num}`
     copyToClipboard(link)
   }
 
