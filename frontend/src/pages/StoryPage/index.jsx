@@ -146,7 +146,8 @@ function StoryPage({setLoginOpen, width}) {
           fontSize: '1.2em',
           fontWeight: '700',
           textAlign: 'center',
-          bottom: '35vh'
+          bottom: '35vh',
+          left: '0.5vw'
         },
         autoClose: 2000
       })
@@ -161,7 +162,8 @@ function StoryPage({setLoginOpen, width}) {
           fontSize: '1em',
           fontWeight: '700',
           textAlign: 'center',
-          bottom: '35vh'
+          bottom: '35vh',
+          left: '0.5vw'
         },
         autoClose: 2000
       });
