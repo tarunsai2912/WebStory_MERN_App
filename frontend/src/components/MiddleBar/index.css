@@ -52,15 +52,15 @@
     border-radius: 10px;
 }
 .slide-head-mid{
-    height: 15vh;
+    height: 20vh;
     width: 20vw;
     border-radius: 0 0 10px 10px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: linear-gradient(180deg, #000000 59.6%, rgba(0, 0, 0, 0) 102.31%);
+    background: linear-gradient(0deg, #000000 85%, rgba(0, 0, 0, 0) 102.31%);
     position: relative;
-    bottom: 16vh;
+    bottom: 20vh;
 }
 .slide-head1-mid{
     font-family: DM Sans;
@@ -175,15 +175,15 @@
         border-radius: 10px;
     }
     .slide-head-mid{
-        height: 15vh;
+        height: 20vh;
         width: 100%;
         border-radius: 0 0 10px 10px;
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        background: linear-gradient(180deg, #000000 59.6%, rgba(0, 0, 0, 0) 102.31%);
+        background: linear-gradient(0deg, #000000 85%, rgba(0, 0, 0, 0) 102.31%);
         position: relative;
-        bottom: 16vh;
+        bottom: 20vh;
     }
     .slide-head1-mid{
         font-family: DM Sans;
@@ -194,7 +194,7 @@
         color: #FFFFFF;
         position: relative;
         left: 3vw;
-        bottom: 4vh;
+        bottom: 3vh;
     }
     .slide-head2-mid{
         font-family: DM Sans;
@@ -205,7 +205,7 @@
         padding-left: 0.5vw;
         position: relative;
         left: 2.5vw;
-        bottom: 10vh;
+        bottom: 9vh;
     }
     .no-story-mid{
         width: 100%;

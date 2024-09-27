@@ -36,7 +36,7 @@ function NavBar4({setCreate}) {
         </div>
         <button className='story-btn-nav4' onClick={() => navigate('/user/all')}>Your Story</button>
         <button className='add-btn-nav4' onClick={handleCreate}>Add story</button>
-        <button className='book-btn-nav4'><img src={bookmarkImg} alt='bookmark_img' width='13vw' height='15vh'></img>Bookmarks</button>
+        <button className='book-btn-nav4' onClick={() => navigate('/')}><img src={bookmarkImg} alt='bookmark_img' width='13vw' height='15vh'></img>Bookmarks</button>
         <button className='logout-btn-nav4' onClick={handleLogout}>Logout</button>
       </div>}
     </div>

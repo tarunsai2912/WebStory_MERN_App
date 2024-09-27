@@ -34,7 +34,7 @@ function NavBar5({setCreate}) {
           <h4 className='name-para-nav5'>{username}</h4>
           <img className='cross1-img-nav5' src={crossImg} alt='cross_img' onClick={() => setOpen(false)}></img>
         </div>
-        <button className='story-btn-nav5'>Your Story</button>
+        <button className='story-btn-nav5' onClick={() => navigate('/')}>Your Story</button>
         <button className='add-btn-nav5' onClick={handleCreate}>Add story</button>
         <button className='book-btn-nav5' onClick={() => navigate('/bookmarks')}><img src={bookmarkImg} alt='bookmark_img' width='13vw' height='15vh'></img>Bookmarks</button>
         <button className='logout-btn-nav5' onClick={handleLogout}>Logout</button>
