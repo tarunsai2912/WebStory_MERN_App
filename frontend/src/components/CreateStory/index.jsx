@@ -18,6 +18,7 @@ function CreateStory({setCreate, width}) {
   const [category, setCategory] = useState('')
   const [loading, setLoading] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [errorOccur, setErrorOccur] = useState(false)
 
   const handleSlideChange = (index, field, value) => {
     const updatedSlides = [...slides];
@@ -25,7 +26,11 @@ function CreateStory({setCreate, width}) {
     if (field === 'url') {
       updatedSlides[index].urlType = getUrlType(value);
       if (updatedSlides[index].urlType === 'video') {
+        setErrorOccur(true)
         validateVideoDuration(value, index);
+      }
+      else{
+        setErrorOccur(false)
       }
     }
     setSlides(updatedSlides);
@@ -54,6 +59,9 @@ function CreateStory({setCreate, width}) {
         updatedSlides[slideIndex].url = '';
         updatedSlides[slideIndex].urlType = '';
         setSlides(updatedSlides);
+      }
+      else{
+        setErrorOccur(false)
       }
     };
     
@@ -202,8 +210,8 @@ function CreateStory({setCreate, width}) {
           >
             Next
           </button>
-          <button className="post-btn-create" onClick={handleSubmit}>Post</button>
-        </div> : <div className='post1-div-create'><button className="post1-btn-create" onClick={handleSubmit}>Post</button></div>}
+          <button className="post-btn-create" onClick={handleSubmit} disabled={errorOccur}>Post</button>
+        </div> : <div className='post1-div-create'><button className="post1-btn-create" onClick={handleSubmit} disabled={errorOccur}>Post</button></div>}
       </div>}
     </>
   )

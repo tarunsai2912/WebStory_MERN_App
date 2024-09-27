@@ -14,6 +14,7 @@ function UpdateStory({setUpdate, width}) {
   const [story, setStory] = useState({})
   const [loading, setLoading] = useState(true)
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [errorOccur, setErrorOccur] = useState(false)
 
   const fetchStory = async () => {
     setLoading(true)
@@ -58,7 +59,11 @@ function UpdateStory({setUpdate, width}) {
     if (field === 'url') {
       updatedSlides[index].urlType = getUrlType(value);
       if (updatedSlides[index].urlType === 'video') {
+        setErrorOccur(true)
         validateVideoDuration(value, index);
+      }
+      else{
+        setErrorOccur(false)
       }
     }
     setStory({
@@ -93,6 +98,9 @@ function UpdateStory({setUpdate, width}) {
           slides:  updatedSlides
         });
         return
+      }
+      else{
+        setErrorOccur(false)
       }
     };
     video.onerror = () => {
@@ -226,8 +234,8 @@ function UpdateStory({setUpdate, width}) {
           >
             Next
           </button>
-          <button className="post-btn-update" onClick={handleSubmit}>Post</button>
-        </div> : <div className='post1-div-update'><button className="post1-btn-update" onClick={handleSubmit}>Post</button></div>}
+          <button className="post-btn-update" onClick={handleSubmit} disabled={errorOccur}>Post</button>
+        </div> : <div className='post1-div-update'><button className="post1-btn-update" onClick={handleSubmit} disabled={errorOccur}>Post</button></div>}
       </div>}
     </>
   )
