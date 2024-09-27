@@ -59,6 +59,8 @@ function CreateStory({setCreate, width}) {
         updatedSlides[slideIndex].url = '';
         updatedSlides[slideIndex].urlType = '';
         setSlides(updatedSlides);
+        setErrorOccur(false)
+        return
       }
       else{
         setErrorOccur(false)

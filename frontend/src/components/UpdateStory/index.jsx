@@ -97,6 +97,7 @@ function UpdateStory({setUpdate, width}) {
           ...story,
           slides:  updatedSlides
         });
+        setErrorOccur(false)
         return
       }
       else{
