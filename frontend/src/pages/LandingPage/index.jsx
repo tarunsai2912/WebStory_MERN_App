@@ -22,6 +22,15 @@ function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isU
   const authToken = sessionStorage.getItem('token')
   const [isRegisterOpen, setRegisterOpen] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState(['All']);
+  const storyId = sessionStorage.getItem('storyId')
+  const storyIndex = sessionStorage.getItem('storyIndex')
+
+  useEffect(() => {
+    if(storyId && storyIndex){
+      sessionStorage.removeItem('storyId')
+      sessionStorage.removeItem('storyIndex')
+    }
+  }, [])
 
   const categories = [
     { name: 'All', img: allImg },
