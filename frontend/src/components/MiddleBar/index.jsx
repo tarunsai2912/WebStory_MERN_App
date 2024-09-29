@@ -46,9 +46,6 @@ function MiddleBar({selectedCategories, isLoginOpen, isRegisterOpen, isCreate, i
     navigate(`/story/${id}/${index}`)
   }
 
-  console.log(filteredStories, selectedCategories.join(','));
-  
-
   return (
     <>
       {loading && <ClipLoader color="#000" />}
