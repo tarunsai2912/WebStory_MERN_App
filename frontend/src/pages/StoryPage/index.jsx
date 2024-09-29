@@ -290,10 +290,10 @@ function StoryPage({setLoginOpen, width}) {
                 <h3 className='slide-h2-story1'>{story.slides[currentSlide].description}</h3>
               </div>
               <div className='bottom-img-div-story1'>
-                {story.slides[currentSlide].bookmarks.includes(userId) && authToken ? <img className='book-img-story1' src={bookmarkImg} alt='bookmark_img' onClick={() => handleUnBookmark(story._id, story.slides[currentSlide]._id)}></img> : <img className='book-img-story1' src={unbookmarkImg} alt='unbookmark_img' onClick={() => handleBookmark(story._id, story.slides[currentSlide]._id)}></img>}
-                {downloadedSlides.includes(currentSlide) ? <img className='download-img-story1' src={tickImg} alt='tick_img'></img> : <img className='download-img-story1' src={downloadImg} alt='download_img' onClick={handleDownload}></img>}
+                {story.slides[currentSlide].bookmarks.includes(userId) && authToken ? <img className='book-img-story1' src={bookmarkImg} alt='bookmark_img' onClick={() => handleUnBookmark(story._id, story.slides[currentSlide]._id)}></img> : <img className='book-img-story1' src={unbookmarkImg} alt='unbookmark_img' onClick={() => handleBookmark(story._id, story.slides[currentSlide]._id, currentSlide)}></img>}
+                {downloadedSlides.includes(currentSlide) ? <img className='download-img-story1' src={tickImg} alt='tick_img'></img> : <img className='download-img-story1' src={downloadImg} alt='download_img' onClick={() => handleDownload(story._id, currentSlide)}></img>}
                 <div className='like-div-story1'>
-                  {story.slides[currentSlide].likes.includes(userId) && authToken ? <img className='like-img-story1' src={likeImg} alt='like_img' onClick={() => handleUnLike(story._id, story.slides[currentSlide]._id)}></img> : <img className='like-img-story1' src={unlikeImg} alt='unlike_img' onClick={() => handleLike(story._id, story.slides[currentSlide]._id)}></img>}
+                  {story.slides[currentSlide].likes.includes(userId) && authToken ? <img className='like-img-story1' src={likeImg} alt='like_img' onClick={() => handleUnLike(story._id, story.slides[currentSlide]._id)}></img> : <img className='like-img-story1' src={unlikeImg} alt='unlike_img' onClick={() => handleLike(story._id, story.slides[currentSlide]._id, currentSlide)}></img>}
                   <p className='likecount-story1'>{story.slides[currentSlide].likesCount}</p>
                 </div>
               </div>
