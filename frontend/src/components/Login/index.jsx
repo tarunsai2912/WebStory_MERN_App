@@ -2,14 +2,18 @@ import React, {useState} from 'react'
 import { UserLogin } from '../../apis/user'
 import crossImg from '../../assets/cross.png'
 import eyeImg from '../../assets/open_eye.png'
+import { useNavigate } from 'react-router-dom'
 import './index.css'
 import ClipLoader from "react-spinners/ClipLoader";
 
 function Login({setLoginOpen}) {
 
+  const navigate = useNavigate()
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [wrong, setWrong] = useState(false)
+  const storyId = sessionStorage.getItem('storyId')
+  const storyIndex = sessionStorage.getItem('storyIndex')
 
   const handleClick = () => setShowPassword(!showPassword);
 
@@ -59,6 +63,15 @@ function Login({setLoginOpen}) {
     const response = await UserLogin({...formData})
       
     if (response) {
+      if(storyId && storyIndex){
+        sessionStorage.setItem('token', response.token);
+        sessionStorage.setItem('userId', response.user_Id);
+        sessionStorage.setItem('name', response.name)
+        setLoading(false)
+        setWrong(false)
+        setLoginOpen(false)
+        navigate(`/story/${storyId}/${storyIndex}`)
+      }
       sessionStorage.setItem('token', response.token);
       sessionStorage.setItem('userId', response.user_Id);
       sessionStorage.setItem('name', response.name)

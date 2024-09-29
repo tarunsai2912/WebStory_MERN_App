@@ -46,7 +46,7 @@ function StoryPage({setLoginOpen, width}) {
     fetchStory()
   }, [story])
 
-  const handleLike = async (storyId, slideId) => {
+  const handleLike = async (storyId, slideId, slideIndex) => {
     if(authToken){
       try {
         const response = await axios.post(`${url}/story/like/${storyId}/${slideId}`, {}, {
@@ -62,6 +62,8 @@ function StoryPage({setLoginOpen, width}) {
       }
     }
     else{
+      sessionStorage.setItem('storyId', storyId)
+      sessionStorage.setItem('storyIndex', slideIndex)
       setLoginOpen(true)
       navigate('/')
     }
@@ -82,7 +84,7 @@ function StoryPage({setLoginOpen, width}) {
     }
   };
 
-  const handleBookmark = async (storyId, slideId) => {
+  const handleBookmark = async (storyId, slideId, slideIndex) => {
     if(authToken){
       try {
         const response = await axios.post(`${url}/story/bookmark/${storyId}/${slideId}`, {}, {
@@ -98,6 +100,8 @@ function StoryPage({setLoginOpen, width}) {
       }
     }
     else{
+      sessionStorage.setItem('storyId', storyId)
+      sessionStorage.setItem('storyIndex', slideIndex)
       setLoginOpen(true)
       navigate('/')
     }
@@ -131,6 +135,8 @@ function StoryPage({setLoginOpen, width}) {
   }
 
   const handleCross = () => {
+    sessionStorage.removeItem('storyId')
+    sessionStorage.removeItem('storyIndex')
     navigate('/')
   }
 
@@ -176,15 +182,23 @@ function StoryPage({setLoginOpen, width}) {
     copyToClipboard(link1)
   }
 
-  const handleDownload = () => {
-    setDownloadedSlides([...downloadedSlides, currentSlide]);
-    const slide = story.slides[currentSlide];
-    const link = document.createElement('a');
-    link.href = slide.url;
-    link.download = slide.url.split('/').pop()
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = (storyId, slideIndex) => {
+    if(authToken){
+      setDownloadedSlides([...downloadedSlides, currentSlide]);
+      const slide = story.slides[currentSlide];
+      const link = document.createElement('a');
+      link.href = slide.url;
+      link.download = slide.url.split('/').pop()
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    else{
+      sessionStorage.setItem('storyId', storyId)
+      sessionStorage.setItem('storyIndex', slideIndex)
+      setLoginOpen(true)
+      navigate('/')
+    }
   };
 
   return (
@@ -226,10 +240,10 @@ function StoryPage({setLoginOpen, width}) {
                   <h3 className='slide-h2-story'>{story.slides[currentSlide].description}</h3>
                 </div>
                 <div className='bottom-img-div-story'>
-                  {story.slides[currentSlide].bookmarks.includes(userId) && authToken ? <img className='book-img-story' src={bookmarkImg} alt='bookmark_img' onClick={() => handleUnBookmark(story._id, story.slides[currentSlide]._id)}></img> : <img className='book-img-story' src={unbookmarkImg} alt='unbookmark_img' onClick={() => handleBookmark(story._id, story.slides[currentSlide]._id)}></img>}
-                  {downloadedSlides.includes(currentSlide) ? <img className='download-img-story' src={tickImg} alt='tick_img'></img> : <img className='download-img-story' src={downloadImg} alt='download_img' onClick={handleDownload}></img>}
+                  {story.slides[currentSlide].bookmarks.includes(userId) && authToken ? <img className='book-img-story' src={bookmarkImg} alt='bookmark_img' onClick={() => handleUnBookmark(story._id, story.slides[currentSlide]._id)}></img> : <img className='book-img-story' src={unbookmarkImg} alt='unbookmark_img' onClick={() => handleBookmark(story._id, story.slides[currentSlide]._id, currentSlide)}></img>}
+                  {downloadedSlides.includes(currentSlide) ? <img className='download-img-story' src={tickImg} alt='tick_img'></img> : <img className='download-img-story' src={downloadImg} alt='download_img' onClick={() => handleDownload(story._id, currentSlide)}></img>}
                   <div className='like-div-story'>
-                    {story.slides[currentSlide].likes.includes(userId) && authToken ? <img className='like-img-story' src={likeImg} alt='like_img' onClick={() => handleUnLike(story._id, story.slides[currentSlide]._id)}></img> : <img className='like-img-story' src={unlikeImg} alt='unlike_img' onClick={() => handleLike(story._id, story.slides[currentSlide]._id)}></img>}
+                    {story.slides[currentSlide].likes.includes(userId) && authToken ? <img className='like-img-story' src={likeImg} alt='like_img' onClick={() => handleUnLike(story._id, story.slides[currentSlide]._id)}></img> : <img className='like-img-story' src={unlikeImg} alt='unlike_img' onClick={() => handleLike(story._id, story.slides[currentSlide]._id, currentSlide)}></img>}
                     <p className='likecount-story'>{story.slides[currentSlide].likesCount}</p>
                   </div>
                 </div>
