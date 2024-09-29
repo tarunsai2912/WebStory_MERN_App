@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import NavBar from '../../components/NavBar'
-import { getAllStories } from '../../apis/story';
 import MiddleBar from '../../components/MiddleBar'
 import Register from '../../components/Register';
 import CreateStory from '../../components/CreateStory';
@@ -21,7 +20,6 @@ import './index.css'
 function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isUpdate, setUpdate}) {
 
   const authToken = sessionStorage.getItem('token')
-  const [stories, setStories] = useState([])
   const [isRegisterOpen, setRegisterOpen] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState(['All']);
 
@@ -63,17 +61,6 @@ function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isU
       window.location.reload(false)
     }
   };
-
-  const handleAllStories = async () => {
-    const response = await getAllStories()
-    if(response){
-      setStories(response)
-    }
-  }
-
-  useEffect(() => {
-    handleAllStories()
-  }, [])
 
   const handleCategory = (cat) => {
     if (selectedCategories.includes(cat)) {
@@ -141,7 +128,7 @@ function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isU
           <img className="right-arr-land" src={rightImg} alt="right_img" width="50vw" height="50vh" style={{ backgroundColor: '#000000', cursor: 'pointer', opacity: startIndex + itemsPerPage >= categories.length ? '0.3' : '1' }} onClick={handleNext}/>
         </div>}
         {width > 500 && authToken && <UserStoryBar isCreate={isCreate} setUpdate={setUpdate} isUpdate={isUpdate} />}
-        <MiddleBar stories={stories} selectedCategories={selectedCategories} isLoginOpen={isLoginOpen} isRegisterOpen={isRegisterOpen} isCreate={isCreate} isUpdate={isUpdate} />
+        {selectedCategories.length > 0 ? <MiddleBar selectedCategories={selectedCategories} isLoginOpen={isLoginOpen} isRegisterOpen={isRegisterOpen} isCreate={isCreate} isUpdate={isUpdate} /> : <h3 className='cat-select-land'>Select Any Category</h3>}
       </div>
       {isRegisterOpen && <Register setRegisterOpen={setRegisterOpen} setLoginOpen={setLoginOpen} />}
       {isLoginOpen && <Login setLoginOpen={setLoginOpen} />}

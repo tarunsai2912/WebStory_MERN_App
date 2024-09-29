@@ -1,10 +1,12 @@
 import React,{useEffect, useState} from 'react'
 import ClipLoader from "react-spinners/ClipLoader"
+import axios from 'axios'
 import './index.css'
 import { useNavigate } from 'react-router-dom';
 
-function MiddleBar({stories, selectedCategories, isLoginOpen, isRegisterOpen, isCreate, isUpdate}) {
+function MiddleBar({selectedCategories, isLoginOpen, isRegisterOpen, isCreate, isUpdate}) {
 
+  const url = 'https://web-story-mern-backend.vercel.app/api'
   const navigate = useNavigate()
   const categories = ["Food", "Travel", "Movie", "Education", "Health and Fitness"];
   const [loading, setLoading] = useState(false)
@@ -20,24 +22,32 @@ function MiddleBar({stories, selectedCategories, isLoginOpen, isRegisterOpen, is
   };
 
   useEffect(() => {
-    setLoading(true)
-    if (selectedCategories.includes("All")) {
-      setFilteredStories(stories);
-      setLoading(false)
-    } 
-    else {
-      setFilteredStories(
-        stories.filter((story) =>
-          selectedCategories.includes(story.category)
-        )
-      );
-      setLoading(false)
-    }
-  }, [selectedCategories, stories])  
+    const fetchFilteredStories = async () => {
+      setLoading(true);
+      try {
+        let reqQuery = '';
+        if (!selectedCategories.includes('All')) {
+          const categoriesQuery = selectedCategories.join(',');
+          reqQuery = `?category=${(categoriesQuery)}`;
+        }
+        const response = await axios.get(`${url}/story${reqQuery}`);
+        setFilteredStories(response.data);
+        setLoading(false)
+      } 
+      catch (error) {
+        setLoading(false);
+        setFilteredStories([]);
+      }
+    };
+    fetchFilteredStories();
+  }, [selectedCategories]);
 
   const handleSelect = (id, index) => {
     navigate(`/story/${id}/${index}`)
   }
+
+  console.log(filteredStories, selectedCategories.join(','));
+  
 
   return (
     <>

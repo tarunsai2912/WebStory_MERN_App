@@ -31,14 +31,3 @@ export const getUserStories = async () => {
         console.log(err);
     }
 }
-
-export const getAllStories = async () => {
-    try{
-        const reqUrl = `${url}/story/`
-        const response = await axios.get(reqUrl)
-        return response.data
-    }
-    catch(err){
-        console.log(err);
-    }
-}

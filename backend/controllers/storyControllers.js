@@ -88,7 +88,7 @@ const getStoriesByCategory = async (req, res, next) => {
         const {category} = req.query;
         let filter = {};
         if (category) {
-            const categoriesArray = category.split(',');
+            const categoriesArray = category.split(',').map((cat) => cat.trim());
             filter.category = { $in: categoriesArray };
         }
         const stories = await Story.find(filter).select('slides category')
