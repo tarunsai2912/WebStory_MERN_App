@@ -18,6 +18,10 @@
     justify-content: right;
     cursor: pointer;
 }
+.cross-img-update{
+    width: 2.5vw;
+    height: 5vh;
+}
 .cross-para-update{
     width: 93%;
     display: flex;
@@ -250,23 +254,27 @@
         background-color: #FFFFFF;
         box-shadow: 0px 4px 30px 0px #FFFFFF40;
         border-radius: 20px;
-        height: 69vh;
+        height: 75vh;
         width: 75vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        padding-top: 0.5vh;
+        padding-top: 2vh;
         position: fixed;
-        top: 15vh;
+        top: 10vh;
         left: 12vw;
     }
     .cross-div-update{
-        width: 98%;
+        width: 95%;
         display: flex;
         justify-content: right;
         cursor: pointer;
+    }
+    .cross-img-update{
+        width: 8vw;
+        height: 4vh;
     }
     .cross-para1-update{
         width: 93%;
@@ -298,7 +306,7 @@
         top: 1vh;
     }
     .slide-no-div-update{
-        height: 7.5vh;
+        height: 9vh;
         width: 100%;
         border-radius: 10px;
     }
@@ -327,7 +335,7 @@
         left: 3vw;
     }
     .slide-add-update{
-        height: 7.5vh;
+        height: 9vh;
         width: 100%;
         border-radius: 10px;
         border: none;
