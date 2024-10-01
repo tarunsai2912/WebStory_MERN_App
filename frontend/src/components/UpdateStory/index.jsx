@@ -5,9 +5,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 function UpdateStory({setUpdate, width}) {
 
+  const navigate = useNavigate()
   const url = 'https://web-story-mern-backend.vercel.app/api'
   const authToken = sessionStorage.getItem('token')
   const storyId = sessionStorage.getItem('storyId')
@@ -110,6 +112,10 @@ function UpdateStory({setUpdate, width}) {
   };
 
   const handleCross = () => {
+    if(width < 500){
+      setUpdate(false)
+      navigate('/user/all')
+    }
     setUpdate(false)
     window.location.reload(false)
   }
@@ -142,7 +148,7 @@ function UpdateStory({setUpdate, width}) {
   return (
     <>
       <ToastContainer />
-      {loading && <ClipLoader color="#000" />}
+      {loading && <ClipLoader color={"#36D7B7"} loading={loading} size={100} />}
       {!loading && <div className='update-container'>
         <div className='cross-div-update'>
           <img className='cross-img-update' src={crossImg} alt='cross_img' onClick={handleCross}></img>

@@ -43,7 +43,7 @@ function UserStoryPage({setUpdate, setCreate}) {
 
   return (
     <div className='userstorypage-container'>
-      {loading && <ClipLoader color="#000" />}
+      {loading && <div style={{position: 'relative', left: '40vw', top: '10vh'}}><ClipLoader color={"#36D7B7"} loading={loading} size={100} /></div>}
       <NavBar5 setCreate={setCreate} />
       {(!loading) && (<div className='userstory-container'>
         <h3 className='userstory-head'>Your Stories</h3>

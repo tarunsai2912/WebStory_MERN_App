@@ -137,7 +137,7 @@ function StoryPage({setLoginOpen, width}) {
   const handleCross = () => {
     sessionStorage.removeItem('storyId')
     sessionStorage.removeItem('storyIndex')
-    navigate('/')
+    navigate(-1)
   }
 
   const copyToClipboard = (link) => {

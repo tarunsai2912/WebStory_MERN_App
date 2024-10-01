@@ -59,7 +59,7 @@ function BookmarkPage({setCreate, width}) {
             })}
           </div> 
           : <h3 className='book-head2'>No Bookmarks Available</h3>}
-      </div> : <div style={{position: 'relative', left:'40vw'}}><ClipLoader color={"#36D7B7"} loading={loading} size={100} /></div>}
+      </div> : <div style={{position: 'relative', left: '40vw', top: '10vh'}}><ClipLoader color={"#36D7B7"} loading={loading} size={100} /></div>}
     </div>
   )
 }
