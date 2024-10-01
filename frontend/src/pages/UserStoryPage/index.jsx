@@ -11,9 +11,6 @@ function UserStoryPage({setUpdate, setCreate}) {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [userStories, setUserStories] = useState([])
-  const [showMore, setShowMore] = useState(false);
-  
-  const visibleStories = showMore ? userStories : userStories.slice(0, 4);
 
   const handleUserStories = async () => {
     setLoading(true)
@@ -49,7 +46,7 @@ function UserStoryPage({setUpdate, setCreate}) {
         <h3 className='userstory-head'>Your Stories</h3>
         {(userStories && userStories.length) ? 
           <div className='stories-container-userstory' >
-            {visibleStories.map((b1, index1) => {
+            {userStories.map((b1, index1) => {
               return (
                 <div className='slides-container-userstory' key={index1}>
                   {b1.slides.map((b2, index2) => {
@@ -78,13 +75,6 @@ function UserStoryPage({setUpdate, setCreate}) {
             })}
           </div> 
           : <h3 className='no-head-userstory'>No stories Available</h3>}
-          {userStories.length > 4 && (
-            <div className='see-more-div-userstory'>
-              <button className='see-more-btn-userstory' onClick={() => setShowMore(!showMore)}>
-                {showMore ? "See Less" : "See More"}
-              </button>
-            </div>
-          )}
       </div>)}
     </div>
   )

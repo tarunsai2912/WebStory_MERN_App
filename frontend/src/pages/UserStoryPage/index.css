@@ -111,27 +111,3 @@
     text-align: center;
     color: #8E8E8E;
 }
-.see-more-div-userstory{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.see-more-btn-userstory{
-    width: 25vw;
-    height: 4vh;
-    border: none;
-    background-color: #FF7373;
-    border-radius: 20px;
-    font-family: DM Sans;
-    font-size: 1em;
-    font-weight: 700;
-    text-align: center;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    cursor: pointer;
-    position: relative;
-    bottom: 1vh;
-}
