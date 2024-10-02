@@ -112,4 +112,17 @@
         position: relative;
         bottom: 14vh;
     }
+    .cat-para2-land{
+        font-family: DM Sans;
+        text-shadow: #00000099;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFFFFF;
+        position: relative;
+        bottom: 14vh;
+    }
 }

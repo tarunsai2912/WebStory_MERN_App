@@ -141,7 +141,7 @@ function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isU
           {categories.slice(startIndex, startIndex + catsPerPage).map((cat, index) => (
             <div className="each-cat-land" key={index} style={{ border: selectedCategories.includes(cat.name) ? '5px solid #00ACD2' : '' }} onClick={() => handleCategory(cat.name)}>
               <img className="cat-img-land" src={cat.img} alt={`${cat.name}_img`} width="10vw" height="10vh" />
-              <h4 className='cat-para-land'>{cat.name}</h4>
+              {cat.name === 'Health and Fitness' ? <h4 className='cat-para2-land'>Health and Fitness</h4> : <h4 className='cat-para-land'>{cat.name}</h4>}
             </div>
           ))}
           <img className="right-arr-land" src={rightImg} alt="right_img" width="50vw" height="50vh" style={{ backgroundColor: '#000000', cursor: 'pointer', opacity: startIndex + catsPerPage >= categories.length ? '0.3' : '1' }} onClick={handleNext}/>
