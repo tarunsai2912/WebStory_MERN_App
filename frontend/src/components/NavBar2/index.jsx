@@ -25,7 +25,8 @@ function NavBar2({setCreate}) {
   return (
     <div className='nav2-container'>
       <div className='log-d1-nav2'>
-        <button className='book-btn-nav2' onClick={() => navigate('/')}><img src={bookmarkImg} alt='bookmark_img' width='13vw' height='15vh'></img>Bookmarks</button>
+        <button className='home-btn-nav2' onClick={() => navigate('/')}>Home</button>
+        <button className='book-btn-nav2'><img src={bookmarkImg} alt='bookmark_img' width='13vw' height='15vh'></img>Bookmarks</button>
         <button className='add-btn-nav2' onClick={handleCreate}>Add story</button>
         <img className='prof-img-nav2' src={profileImg} alt='profile_img'></img>
         <img className='bar-img-nav2' src={navbarImg} alt='navbar_img' onClick={() => setOpen(!open)}></img>

@@ -34,9 +34,10 @@ function NavBar4({setCreate}) {
           <h4 className='name-para-nav4'>{username}</h4>
           <img className='cross1-img-nav4' src={crossImg} alt='cross_img' onClick={() => setOpen(false)}></img>
         </div>
+        <button className='home-btn-nav4' onClick={() => navigate('/')}>Home</button>
         <button className='story-btn-nav4' onClick={() => navigate('/user/all')}>Your Story</button>
         <button className='add-btn-nav4' onClick={handleCreate}>Add story</button>
-        <button className='book-btn-nav4' onClick={() => navigate('/')}><img src={bookmarkImg} alt='bookmark_img' width='13vw' height='15vh'></img>Bookmarks</button>
+        <button className='book-btn-nav4'><img src={bookmarkImg} alt='bookmark_img' width='13vw' height='15vh'></img>Bookmarks</button>
         <button className='logout-btn-nav4' onClick={handleLogout}>Logout</button>
       </div>}
     </div>

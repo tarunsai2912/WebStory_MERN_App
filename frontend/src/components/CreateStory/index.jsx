@@ -111,7 +111,7 @@ function CreateStory({setCreate, width}) {
         setLoading(false)
       }
     } catch (error) {
-      toast.error(error.response?.data?.message || "An error occurred!");
+      toast.error(error.response?.data?.message || "Add urls of .jpg/.jpeg/.png/.gif/.mp4/.webm/.ogg only");
       setLoading(false)
     }
   };

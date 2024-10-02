@@ -65,10 +65,11 @@
 }
 .slide-h2-user{
     font-family: DM Sans;
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-weight: 700;
     color: #FFFFFF;
     padding-left: 0.5vw;
+    padding-right: 0.5vw;
     position: relative;
     bottom: 11vh;
 }

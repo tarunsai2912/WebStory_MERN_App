@@ -73,10 +73,11 @@
 }
 .slide-head2-mid{
     font-family: DM Sans;
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-weight: 700;
     color: #FFFFFF;
     padding-left: 0.5vw;
+    padding-right: 0.5vw;
     position: relative;
     bottom: 11vh;
 }
@@ -199,10 +200,11 @@
     .slide-head2-mid{
         font-family: DM Sans;
         width: 95%;
-        font-size: 0.8em;
+        font-size: 0.6em;
         font-weight: 700;
         color: #FFFFFF;
         padding-left: 0.5vw;
+        padding-right: 0.5vw;
         position: relative;
         left: 2.5vw;
         bottom: 9vh;

@@ -16,11 +16,27 @@
     align-items: center;
     gap: 2.5vw;
 }
-.book-btn-nav2{
+.home-btn-nav2{
     background-color: #FF7373;
     width: 8vw;
     height: 5vh;
     border: none;
+    border-radius: 20px;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: .2vw;
+    cursor: pointer;
+}
+.book-btn-nav2{
+    background-color: #FF7373;
+    width: 8vw;
+    height: 5vh;
     border-radius: 20px;
     font-family: DM Sans;
     border: 3px solid #085CFF;
