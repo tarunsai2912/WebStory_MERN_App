@@ -124,20 +124,31 @@ function StoryPage({setLoginOpen, width}) {
 
   const handleLeft = () => {
     if(currentSlide !== 0){
-        setCurrentSlide(currentSlide - 1)
+      setCurrentSlide(currentSlide - 1)
+    }
+    else {
+      setCurrentSlide(story.slides.length - 1)
     }
   }
 
   const handleRight = () => {
     if(currentSlide !== story.slides.length - 1){
-        setCurrentSlide(currentSlide + 1)
+      setCurrentSlide(currentSlide + 1)
+    }
+    else {
+      setCurrentSlide(0)
     }
   }
 
   const handleCross = () => {
     sessionStorage.removeItem('storyId')
     sessionStorage.removeItem('storyIndex')
-    navigate(-1)
+    if(window.history.length > 1){
+      navigate(-1)
+    }
+    else {
+      navigate('/')
+    }
   }
 
   const copyToClipboard = (link) => {
