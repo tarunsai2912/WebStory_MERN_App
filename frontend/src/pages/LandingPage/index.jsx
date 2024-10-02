@@ -72,11 +72,21 @@ function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isU
   };
 
   const handleCategory = (cat) => {
-    if (selectedCategories.includes(cat)) {
-      setSelectedCategories(selectedCategories.filter((c) => c !== cat));
+    if (cat === 'All') {
+      setSelectedCategories(['All'])
     }
     else {
-      setSelectedCategories([...selectedCategories, cat]);
+      if (selectedCategories.includes('All')) {
+        setSelectedCategories([cat])
+      }
+      else {
+        if (selectedCategories.includes(cat)) {
+          setSelectedCategories(selectedCategories.filter((c) => c !== cat));
+        }
+        else {
+          setSelectedCategories([...selectedCategories, cat]);
+        }
+      }
     }
   }
 

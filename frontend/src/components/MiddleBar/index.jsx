@@ -65,7 +65,7 @@ function MiddleBar({selectedCategories, isLoginOpen, isRegisterOpen, isCreate, i
                               {story.slides.map((slide, slideIndex) => (
                                 slideIndex === 0 && (
                                   <div className='each-slide-container' key={slideIndex} onClick={() =>  handleSelect(story._id, slideIndex)}>
-                                    {slide.urlType === 'image' ? <img className='img-slide-mid' src={slide.url} alt='image_txt'></img> : <video className='vid-slide-mid' autoPlay muted><source src={slide.url}></source></video>}
+                                    {slide.urlType === 'image' ? <img className='img-slide-mid' src={slide.url} alt='image_txt'></img> : <video className='vid-slide-mid' autoPlay muted loop><source src={slide.url}></source></video>}
                                     <div className='slide-head-mid'>
                                       <h4 className='slide-head1-mid'>{slide.heading}</h4>
                                       <h6 className='slide-head2-mid'>{slide.description}</h6>

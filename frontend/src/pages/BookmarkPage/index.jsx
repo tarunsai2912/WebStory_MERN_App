@@ -46,7 +46,7 @@ function BookmarkPage({setCreate, width}) {
                   return(
                     index2 === b1.slideIndex && 
                     <div key={index2} className='slide-container-book' onClick={() =>  handleSelect(b1.story._id, b1.slideIndex)}>
-                      {b2.urlType === 'image' ? <img className='img-slide-book' src={b2.url} alt='image_txt'></img> : <video className='vid-slide-book' autoPlay muted><source src={b2.url}></source></video>}
+                      {b2.urlType === 'image' ? <img className='img-slide-book' src={b2.url} alt='image_txt'></img> : <video className='vid-slide-book' autoPlay muted loop><source src={b2.url}></source></video>}
                       <div className='para-div-book'>
                         <h4 className='h1-para-book'>{b2.heading}</h4>
                         <h6 className='h2-para-book'>{b2.description}</h6>

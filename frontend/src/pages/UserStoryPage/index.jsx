@@ -55,7 +55,7 @@ function UserStoryPage({setUpdate, setCreate}) {
                         {b2.urlType === 'image' ? 
                           <img className='slide-img-userstory' src={b2.url} alt='image_txt' onClick={() =>  handleSelect(b1._id, index2)} /> 
                           : 
-                          <video className='slide-video-userstory' autoPlay muted onClick={() =>  handleSelect(b1._id, index2)}>
+                          <video className='slide-video-userstory' autoPlay muted loop onClick={() =>  handleSelect(b1._id, index2)}>
                             <source src={b2.url} />
                           </video>
                         }

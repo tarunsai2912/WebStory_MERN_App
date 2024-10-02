@@ -182,16 +182,30 @@ function StoryPage({setLoginOpen, width}) {
     copyToClipboard(link1)
   }
 
+  const downloadSlide = async (slideUrl) => {
+    try {
+      const response = await fetch(slideUrl);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'slideDownload';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } 
+    catch (error) {
+      console.error(error);
+      toast.error('Error in downloading the slide');
+    }
+  };
+
   const handleDownload = (storyId, slideIndex) => {
     if(authToken){
       setDownloadedSlides([...downloadedSlides, currentSlide]);
       const slide = story.slides[currentSlide];
-      const link = document.createElement('a');
-      link.href = slide.url;
-      link.download = slide.url.split('/').pop()
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      downloadSlide(slide.url)
     }
     else{
       sessionStorage.setItem('storyId', storyId)
@@ -214,7 +228,7 @@ function StoryPage({setLoginOpen, width}) {
             {story.slides[currentSlide].urlType === "image" ? (
               <img className='slide-img-story' src={story.slides[currentSlide].url} alt="slide_img" />
             ) : (
-              <video className='slide-video-story' autoPlay muted >
+              <video className='slide-video-story' autoPlay muted loop >
                 <source src={story.slides[currentSlide].url} />
               </video>
             )}
@@ -264,7 +278,7 @@ function StoryPage({setLoginOpen, width}) {
           {story.slides[currentSlide].urlType === "image" ? (
             <img className='slide-img-story1' src={story.slides[currentSlide].url} alt="slide_img" />
           ) : (
-            <video className='slide-video-story1' src={story.slides[currentSlide].url} autoPlay muted >
+            <video className='slide-video-story1' src={story.slides[currentSlide].url} autoPlay muted loop >
               <source src={story.slides[currentSlide].url} />
             </video>
           )}

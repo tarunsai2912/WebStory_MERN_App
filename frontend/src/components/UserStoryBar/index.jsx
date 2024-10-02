@@ -5,7 +5,7 @@ import editImg from '../../assets/edit.png'
 import { useNavigate } from 'react-router-dom'
 import './index.css'
 
-function UserStoryBar({isCreate, setUpdate, isUpdate, setSelect}) {
+function UserStoryBar({isCreate, setUpdate, isUpdate}) {
   
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
@@ -55,7 +55,7 @@ function UserStoryBar({isCreate, setUpdate, isUpdate, setSelect}) {
                         {b2.urlType === 'image' ? 
                           <img className='slide-img-user' src={b2.url} alt='image_txt' onClick={() =>  handleSelect(b1._id, index2)} /> 
                           : 
-                          <video className='slide-video-user' autoPlay muted onClick={() =>  handleSelect(b1._id, index2)}>
+                          <video className='slide-video-user' autoPlay muted loop onClick={() =>  handleSelect(b1._id, index2)}>
                             <source src={b2.url} />
                           </video>
                         }
