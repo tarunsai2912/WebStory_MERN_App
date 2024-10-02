@@ -143,11 +143,11 @@ function StoryPage({setLoginOpen, width}) {
   const handleCross = () => {
     sessionStorage.removeItem('storyId')
     sessionStorage.removeItem('storyIndex')
-    if(window.history.length > 1){
+    if(window.history.length > 0){
       navigate(-1)
     }
     else {
-      navigate('/')
+      window.location.href = '/';
     }
   }
 
