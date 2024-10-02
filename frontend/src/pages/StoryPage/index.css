@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(10%);
+    filter: brightness(5%);
 }
 .story-container{
     height: 80vh;
@@ -29,7 +29,7 @@
     align-items: center;
 }
 .left-img-story{
-    width: 5vw;
+    width: 4vw;
     height: 8vh;
     cursor: pointer;
 }
@@ -101,7 +101,7 @@
     left: 0.5vw;
 }
 .share-img-story{
-    width: 1.5vw;
+    width: 1.75vw;
     height: 3.5vh;
     cursor: pointer;
 }
@@ -169,7 +169,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 63vh;
+    bottom: 5vh;
 }
 .download-head-story{
     font-family: DM Sans;
@@ -207,7 +207,7 @@
     align-items: center;
 }
 .right-img-story{
-    width: 5vw;
+    width: 4vw;
     height: 8vh;
     cursor: pointer;
 }
@@ -377,7 +377,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 87vh;
+    bottom: 10vh;
 }
 .download-head-story1{
     font-family: DM Sans;

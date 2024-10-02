@@ -136,7 +136,7 @@
         box-shadow: 0px 4px 30px 0px #FFFFFF40;
         border-radius: 20px;
         height: 60vh;
-        width: 70vw;
+        width: 80vw;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -146,7 +146,7 @@
         padding-top: 5vh;
         position: fixed;
         top: 15vh;
-        left: 15vw;
+        left: 10vw;
     }
     .log-container-cross{
         width: 60vw;
@@ -210,6 +210,7 @@
         justify-content: center;
         align-items: baseline;
         gap: -10vh;
+        position: relative;
     }
     .pass-para-log{
         font-family: DM Sans;
@@ -234,9 +235,9 @@
     .eye-img-log{
         z-index: 1;
         cursor: pointer;
-        position: relative;
-        bottom: 3.5vh;
-        left: 48vw;
+        position: absolute;
+        bottom: 1vh;
+        right: 7vw;
     }
     .pass-err-log{
         width: 85%;
