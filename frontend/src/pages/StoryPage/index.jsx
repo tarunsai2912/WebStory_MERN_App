@@ -16,12 +16,10 @@ import likeImg from '../../assets/liked.png'
 import unlikeImg from '../../assets/unliked.png'
 import bookmarkImg from  '../../assets/bookmarked.png'
 import { useNavigate } from 'react-router-dom'
-import { useHistory } from 'react-router-dom'
 import unbookmarkImg from '../../assets/unbookmarked.png'
 
 function StoryPage({setLoginOpen, width}) {
 
-  const history = useHistory()
   const navigate = useNavigate()
   const {storyId, num} = useParams()
   const url = 'https://web-story-mern-backend.vercel.app/api'
@@ -145,7 +143,7 @@ function StoryPage({setLoginOpen, width}) {
   const handleCross = () => {
     sessionStorage.removeItem('storyId')
     sessionStorage.removeItem('storyIndex')
-    if(history.length){
+    if(window.history.length > 2){
       navigate(-1)
     }
     else {
