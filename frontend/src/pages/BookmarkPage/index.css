@@ -37,11 +37,13 @@
     width: 20vw;
     border-radius: 10px;
     cursor: pointer;
+    position: relative;
 }
 .slide-container-book{
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    background-color: #292727;
 }
 .img-slide-book{
     width: 100%;
@@ -63,8 +65,8 @@
     flex-direction: column;
     overflow: hidden;
     background: linear-gradient(0deg, #000000 85%, rgba(0, 0, 0, 0) 102.31%);
-    position: relative;
-    bottom: 20vh;
+    position: absolute;
+    bottom: 0vh;
 }
 .h1-para-book{
     font-family: DM Sans;
@@ -130,11 +132,13 @@
         width: 100%;
         border-radius: 10px;
         cursor: pointer;
+        position: relative;
     }
     .slide-container-book{
         height: 100%;
         width: 100%;
         border-radius: 10px;
+        background-color: #292727;
     }
     .img-slide-book{
         width: 100%;
@@ -156,8 +160,8 @@
         flex-direction: column;
         overflow: hidden;
         background: linear-gradient(0deg, #000000 85%, rgba(0, 0, 0, 0) 102.31%);
-        position: relative;
-        bottom: 20vh;
+        position: absolute;
+        bottom: 0vh;
     }
     .h1-para-book{
         font-family: DM Sans;
