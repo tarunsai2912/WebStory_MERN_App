@@ -143,12 +143,13 @@ function StoryPage({setLoginOpen, width}) {
   const handleCross = () => {
     sessionStorage.removeItem('storyId')
     sessionStorage.removeItem('storyIndex')
-    if(window.history.length > 0){
-      navigate(-1)
-    }
-    else {
-      window.location.href = '/';
-    }
+    // if(window.history.length > 0){
+    //   navigate(-1)
+    // }
+    // else {
+    //   navigate('https://web-story-mern-frontend.vercel.app/')
+    // }
+    navigate('/')
   }
 
   const copyToClipboard = (link) => {
