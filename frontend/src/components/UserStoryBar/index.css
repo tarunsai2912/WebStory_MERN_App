@@ -91,6 +91,9 @@
     left: 8.5vw;
     cursor: pointer;
 }
+.edit-btn-user:hover{
+    opacity: 0.8;
+}
 .no-head-user{
     width: 100%;
     font-family: DM Sans;

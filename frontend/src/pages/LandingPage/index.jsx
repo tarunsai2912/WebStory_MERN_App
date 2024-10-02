@@ -42,7 +42,7 @@ function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isU
   ];
 
   const [startIndex, setStartIndex] = useState(0); 
-  const itemsPerPage = 2;
+  const catsPerPage = 2;
 
   const toggleRegister = () => {
     setLoginOpen(false)
@@ -91,14 +91,14 @@ function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isU
   }
 
   const handleNext = () => {
-    if (startIndex + itemsPerPage < categories.length) {
-      setStartIndex(startIndex + itemsPerPage);
+    if (startIndex + catsPerPage < categories.length) {
+      setStartIndex(startIndex + catsPerPage);
     }
   };
 
   const handlePrev = () => {
-    if (startIndex - itemsPerPage >= 0) {
-      setStartIndex(startIndex - itemsPerPage);
+    if (startIndex - catsPerPage >= 0) {
+      setStartIndex(startIndex - catsPerPage);
     }
   };
 
@@ -138,13 +138,13 @@ function LandingPage({isCreate, setCreate, isLoginOpen, setLoginOpen, width, isU
         </div> : 
         <div className='cat-div-land' style={{backgroundColor: isLoginOpen || isRegisterOpen || isCreate || isUpdate ? '#000000' : '#FFFFFF', opacity: isLoginOpen || isRegisterOpen || isCreate || isUpdate ? '0.2' : '1'}}>
           <img className="left-arr-land" src={leftImg} alt="left_img" width="50vw" height="50vh" style={{ backgroundColor: '#000000', cursor: 'pointer', opacity: startIndex === 0 ? '0.3' : '1' }} onClick={handlePrev}/>
-          {categories.slice(startIndex, startIndex + itemsPerPage).map((cat, index) => (
+          {categories.slice(startIndex, startIndex + catsPerPage).map((cat, index) => (
             <div className="each-cat-land" key={index} style={{ border: selectedCategories.includes(cat.name) ? '5px solid #00ACD2' : '' }} onClick={() => handleCategory(cat.name)}>
               <img className="cat-img-land" src={cat.img} alt={`${cat.name}_img`} width="10vw" height="10vh" />
               <h4 className='cat-para-land'>{cat.name}</h4>
             </div>
           ))}
-          <img className="right-arr-land" src={rightImg} alt="right_img" width="50vw" height="50vh" style={{ backgroundColor: '#000000', cursor: 'pointer', opacity: startIndex + itemsPerPage >= categories.length ? '0.3' : '1' }} onClick={handleNext}/>
+          <img className="right-arr-land" src={rightImg} alt="right_img" width="50vw" height="50vh" style={{ backgroundColor: '#000000', cursor: 'pointer', opacity: startIndex + catsPerPage >= categories.length ? '0.3' : '1' }} onClick={handleNext}/>
         </div>}
         {width > 500 && authToken && <UserStoryBar isCreate={isCreate} setUpdate={setUpdate} isUpdate={isUpdate} />}
         {selectedCategories.length > 0 ? <MiddleBar selectedCategories={selectedCategories} isLoginOpen={isLoginOpen} isRegisterOpen={isRegisterOpen} isCreate={isCreate} isUpdate={isUpdate} /> : <h3 className='cat-select-land'>Select Any Category</h3>}

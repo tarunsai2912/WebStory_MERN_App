@@ -33,6 +33,9 @@
     gap: .2vw;
     cursor: pointer;
 }
+.home-btn-nav2:hover{
+    opacity: 0.5;
+}
 .book-btn-nav2{
     background-color: #FF7373;
     width: 9vw;
@@ -50,6 +53,9 @@
     gap: .2vw;
     cursor: pointer;
 }
+.book-btn-nav2:hover{
+    opacity: 0.5;
+}
 .add-btn-nav2{
     background-color: #FF7373;
     width: 8vw;
@@ -65,6 +71,9 @@
     justify-content: center;
     align-items: center;  
     cursor: pointer;
+}
+.add-btn-nav2:hover{
+    opacity: 0.5;
 }
 .prof-img-nav2{
     width: 2.5vw;
@@ -116,4 +125,7 @@
     cursor: pointer;
     position: absolute;
     bottom: 3vh;
+}
+.logout-btn-nav2:hover{
+    opacity: 0.5;
 }
