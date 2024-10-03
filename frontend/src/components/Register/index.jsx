@@ -63,7 +63,7 @@ function Register({setRegisterOpen, setLoginOpen}) {
       
     if (response) {
       setLoading(false)
-      alert("User got Registered")
+      alert("User got Registered Successfully!")
       setRegisterOpen(false)
       setWrong(false)
       setLoginOpen(true)
@@ -96,7 +96,7 @@ function Register({setRegisterOpen, setLoginOpen}) {
           <img className='eye-img-reg' src={eyeImg} alt='eye_img' onClick={handleClick}></img>
         </div>
         {errors.password && <span className='pass-err-reg' style={{ color: 'red' }}>{errors.password}</span>}
-        {wrong && <p className='err-reg' style={{color: 'red'}}>User Already Registered</p>}
+        {wrong && <p className='err-reg' style={{color: 'red'}}>User Already got Registered</p>}
         <button onClick={handleSubmit} className='signup-btn-reg'>Register</button>
       </div> : <div style={{position: 'relative', left:'40vw'}}><ClipLoader color={"#36D7B7"} loading={loading} size={100} /></div>}
     </>
