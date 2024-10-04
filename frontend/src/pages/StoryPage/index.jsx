@@ -143,7 +143,7 @@ function StoryPage({setLoginOpen, width}) {
   const handleCross = () => {
     sessionStorage.removeItem('storyId')
     sessionStorage.removeItem('storyIndex')
-    if(window.history.length > 2){
+    if (authToken) {
       navigate(-1)
     }
     else {
