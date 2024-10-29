@@ -23,7 +23,7 @@
     display: flex;
     justify-content: right;
     font-family: DM Sans;
-    font-size: 0.6em;
+    font-size: 0.6vw;
     font-weight: 700;
     color: #474141;
     position: relative;
@@ -57,7 +57,7 @@
     justify-content: center;
     align-items: center;
     gap: 0.2vw;
-    font-size: 0.8em;
+    font-size: 0.8vw;
     font-weight: 700;
     text-align: center;
 }
@@ -75,7 +75,7 @@
     box-shadow: 0px 4px 15px 0px #0000001A;
     font-family: DM Sans;
     gap: 0.2vw;
-    font-size: 0.8em;
+    font-size: 0.8vw;
     font-weight: 700;
     text-align: center;
     cursor: pointer;
@@ -96,7 +96,7 @@
 }
 .head-para-update{
     font-family: DM Sans;
-    font-size: 1.2em;
+    font-size: 1.2vw;
     width: 10vw;
     font-weight: 700;
     color: #000000;
@@ -107,7 +107,7 @@
     border: 1px solid #000000;
     background-color: #FFFFFF;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     color: #474141;
     padding-left: 1vw;
@@ -120,7 +120,7 @@
 .descr-para-update{
     font-family: DM Sans;
     width: 10vw;
-    font-size: 1.2em;
+    font-size: 1.2vw;
     font-weight: 700;
     color: #000000;
 }
@@ -130,7 +130,7 @@
     border: 1px solid #000000;
     background-color: #FFFFFF;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     resize: none;
     font-weight: 700;
     color: #474141;
@@ -145,7 +145,7 @@
 .url-para-update{
     font-family: DM Sans;
     width: 10vw;
-    font-size: 1.2em;
+    font-size: 1.2vw;
     font-weight: 700;
     color: #000000;
 }
@@ -155,7 +155,7 @@
     border: 1px solid #000000;
     background-color: #FFFFFF;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     color: #474141;
     padding-left: 1vw;
@@ -169,7 +169,7 @@
 .cat-para-update{
     font-family: DM Sans;
     width: 10vw;
-    font-size: 1.2em;
+    font-size: 1.2vw;
     font-weight: 700;
     color: #000000;
 }
@@ -179,7 +179,7 @@
     border: 1px solid #000000;
     background-color: #FFFFFF;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     color: #474141;
     padding-left: 1vw;
@@ -202,7 +202,7 @@
     background-color: #7EFF73;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -218,7 +218,7 @@
     background-color: #73ABFF;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -234,7 +234,7 @@
     background-color: #FF7373;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;

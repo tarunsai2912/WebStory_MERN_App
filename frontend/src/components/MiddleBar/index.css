@@ -16,7 +16,7 @@
 }
 .cat-head-mid{
     font-family: DM Sans;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     color: #000000;
     font-weight: 700;
     text-align: center;
@@ -65,7 +65,7 @@
 }
 .slide-head1-mid{
     font-family: DM Sans;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -74,7 +74,7 @@
 }
 .slide-head2-mid{
     font-family: DM Sans;
-    font-size: 0.6em;
+    font-size: 0.6vw;
     font-weight: 700;
     color: #FFFFFF;
     padding-left: 0.5vw;
@@ -85,7 +85,7 @@
 .no-story-mid{
     width: 100%;
     font-family: DM Sans;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     color: #000000;
     font-weight: 700;
     text-align: center;
@@ -105,7 +105,7 @@
     background-color: #FF7373;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -117,7 +117,7 @@
 .mid-head{
     width: 100%;
     font-family: DM Sans;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     color: #000000;
     font-weight: 700;
     text-align: center;

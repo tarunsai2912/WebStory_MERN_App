@@ -5,7 +5,7 @@
 }
 .user-head{
     font-family: DM Sans;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     color: #000000;
     font-weight: 700;
     text-align: center;
@@ -58,7 +58,7 @@
 }
 .slide-h1-user{
     font-family: DM Sans;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -67,7 +67,7 @@
 }
 .slide-h2-user{
     font-family: DM Sans;
-    font-size: 0.6em;
+    font-size: 0.6vw;
     font-weight: 700;
     color: #FFFFFF;
     padding-left: 0.5vw;
@@ -84,7 +84,7 @@
     color: #000000;
     font-family: DM Sans;
     font-weight: 700;
-    font-size: 0.9em;
+    font-size: 0.9vw;
     border: none;
     box-shadow: 0px 4px 4px 0px #00000040;
     border-radius: 15px;
@@ -99,7 +99,7 @@
 .no-head-user{
     width: 100%;
     font-family: DM Sans;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     color: #000000;
     font-weight: 700;
     text-align: center;
@@ -118,7 +118,7 @@
     background-color: #FF7373;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;

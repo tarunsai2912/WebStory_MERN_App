@@ -22,7 +22,7 @@
     border: none;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -42,7 +42,7 @@
     border: none;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -80,7 +80,7 @@
 .name-para-nav{
     color: #000000;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     position: absolute;
     top: 0;
 }
@@ -91,7 +91,7 @@
     border: none;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -121,7 +121,7 @@
     border: none;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
@@ -142,7 +142,7 @@
     border: none;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;

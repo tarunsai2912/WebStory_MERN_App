@@ -27,7 +27,7 @@
 }
 .reg-container-head{
     font-family: DM Sans;
-    font-size: 1.2em;
+    font-size: 1.2vw;
     font-weight: 700;
     text-align: center;
     color: #000000;
@@ -41,7 +41,7 @@
 }
 .name-para-reg{
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #000000;
@@ -51,7 +51,7 @@
     height: 4vh;
     border: 1px solid #000000;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: left;
     color: #8E8E8E;
@@ -59,7 +59,7 @@
 }
 .name-err-reg{
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@
 }
 .pass-para-reg{
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: center;
     color: #000000;
@@ -83,7 +83,7 @@
     height: 4vh;
     border: 1px solid #000000;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: left;
     color: #8E8E8E;
@@ -97,7 +97,7 @@
 }
 .pass-err-reg{
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: left;
     display: flex;
@@ -106,7 +106,7 @@
 }
 .err-reg{
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     text-align: left;
     display: flex;
@@ -120,7 +120,7 @@
     border: none;
     border-radius: 20px;
     font-family: DM Sans;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 700;
     color: #000000;
     display: flex;
